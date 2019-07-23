@@ -1,0 +1,40 @@
+{
+  "name": "chocofamilyme/phalcon-model-listener",
+  "description": "Phalcon model listener",
+  "keywords": [
+    "pubsub",
+    "phalcon",
+    "events",
+    "microservice",
+    "eventsource"
+  ],
+  "type": "labrary",
+  "license": [
+    "BSD-3-Clause"
+  ],
+  "homepage": "https://github.com/chocofamilyme/phalcon-model-listener",
+  "authors": [
+    {
+      "name": "IT Chocolife.me",
+      "homepage": "https://chocolife.me/"
+    }
+  ],
+  "require": {
+    "php": ">= 7.0.0",
+    "chocofamilyme/pubsub": "2.*"
+  },
+  "require-dev": {
+    "codeception/codeception": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Chocofamily\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Chocofamily\\PhalconModelListener\\Tests\\": "tests/",
+      "Chocofamily\\PhalconModelListener\\Unit\\": "tests/unit"
+    }
+  }
+}
