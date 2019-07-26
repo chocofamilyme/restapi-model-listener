@@ -72,11 +72,11 @@ public function register()
             $this->serviceName,
             function () {
                 $serializer = new CustomSerializer();
-                
+                $listener = new ModelsListener();
+                $listener->setObjectSerializer($serializer);
+
                 $eventsManager = new Manager();
-                $eventsManager->setObjectSerializer($serializer);
-                
-                $eventsManager->attach('model', new ModelsListener());
+                $eventsManager->attach('model', $listener);
                 return $eventsManager;
             }
         );
