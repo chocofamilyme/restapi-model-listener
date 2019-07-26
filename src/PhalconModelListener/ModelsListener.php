@@ -67,7 +67,7 @@ class ModelsListener
      * @param string $eventName
      * @return string|null
      */
-    protected function getModelQueueName(Model $model, string $eventName)
+    protected function getModelQueueName(Model $model, string $eventName): string
     {
         try {
             /** @var $model HasEvents */
@@ -81,7 +81,7 @@ class ModelsListener
      * @param $arguments
      * @return bool
      */
-    private function checkClass($arguments)
+    private function checkClass($arguments): bool
     {
         /** @var Model $model */
         $model = $arguments[1];
@@ -94,11 +94,11 @@ class ModelsListener
     }
 
     /**
-     * @param $method
-     * @param $arguments
+     * @param string $method
+     * @param array $arguments
      * @return mixed
      */
-    public function __call($method, $arguments)
+    public function __call(string $method, array $arguments)
     {
         if ($this->checkClass($arguments)) {
             $this->setEventSource();
@@ -117,11 +117,11 @@ class ModelsListener
     }
 
     /**
-     * @param $model
-     * @param $queueName
+     * @param Model $model
+     * @param string $queueName
      * @return void
      */
-    protected function publish($model, $queueName)
+    protected function publish(Model $model, string $queueName)
     {
         if ($this->isPublish and $queueName) {
 
@@ -138,7 +138,7 @@ class ModelsListener
      * @param Model $model
      * @return array
      */
-    protected function getPayload($model)
+    protected function getPayload(Model $model): array
     {
         if ($model instanceof SerializerInterface) {
             /** @var $model SerializerInterface|Model */
