@@ -67,7 +67,7 @@ class ModelsListener
      * @param string $eventName
      * @return string|null
      */
-    protected function getModelQueueName(Model $model, string $eventName): string
+    protected function getModelQueueName(Model $model, string $eventName): ?string
     {
         try {
             /** @var $model HasEvents */
@@ -78,10 +78,10 @@ class ModelsListener
     }
 
     /**
-     * @param $arguments
+     * @param array $arguments
      * @return bool
      */
-    private function checkClass($arguments): bool
+    private function checkClass(array $arguments): bool
     {
         /** @var Model $model */
         $model = $arguments[1];
