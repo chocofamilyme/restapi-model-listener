@@ -29,7 +29,7 @@ class ServiceProvider extends AbstractServiceProvider
 }
 ````
 
-Прослушивает события ``afterSave``, ``afterUpdate``, ``afterDelete``. Для прослушки модель должна реализовывать 
+Прослушивает события ``afterCreate``, ``afterUpdate``, ``afterDelete``. Для прослушки модель должна реализовывать 
 интерфейс ``HasEvents``
 
 Метод ``getQueueName`` интерфейса должен возвращать имя очереди по имени события.

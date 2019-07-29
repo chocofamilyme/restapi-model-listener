@@ -33,7 +33,7 @@ class ModelsListener
      * @param Event $event
      * @param Model $model
      */
-    protected function afterSave(Event $event, Model $model)
+    protected function afterCreate(Event $event, Model $model)
     {
         $queueName = $this->getModelQueueName($model, 'created');
 
