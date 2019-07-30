@@ -64,7 +64,7 @@ class Order extends Model implements HasEvents
     }
     /**
      * @param Model $model
-     * @return string
+     * @return array
      */
     public function getAttributes(Model $model): array
     {
