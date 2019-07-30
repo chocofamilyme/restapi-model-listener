@@ -121,7 +121,7 @@ class ModelsListener
      * @param string $queueName
      * @return void
      */
-    protected function publish(Model $model, string $queueName)
+    protected function publish(Model $model, string $queueName = null)
     {
         if ($this->isPublish and $queueName) {
 
