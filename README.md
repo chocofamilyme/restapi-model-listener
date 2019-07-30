@@ -5,6 +5,15 @@
 ## Требуется
     - Phalcon > 3.0.0
     - chocofamilyme/pubsub > 2.*
+    - RestAPI
+    
+## Установка
+
+С помощью composer
+
+```php
+composer require chocofamilyme/restapi-model-listener
+```    
     
 ## Использование
 
@@ -52,6 +61,17 @@ class Order extends Model implements HasEvents
     public function getQueueName(string $eventName) : string
     {
         return self::EVENTS[$eventName];
+    }
+    /**
+     * @param Model $model
+     * @return string
+     */
+    public function getAttributes(Model $model): array
+    {
+        return [
+            'id'        => $model->getId(),
+            'custom'    => 'some-custom'
+        ];
     }
     
     //other logic..
