@@ -1,5 +1,5 @@
 {
-  "name": "chocofamilyme/phalcon-model-listener",
+  "name": "chocofamilyme/restapi-model-listener",
   "description": "Phalcon model listener",
   "keywords": [
     "pubsub",
@@ -12,7 +12,7 @@
   "license": [
     "BSD-3-Clause"
   ],
-  "homepage": "https://github.com/chocofamilyme/phalcon-model-listener",
+  "homepage": "https://github.com/chocofamilyme/restapi-model-listener",
   "authors": [
     {
       "name": "IT Chocolife.me",
